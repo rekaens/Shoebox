@@ -15,38 +15,33 @@ Dies ist eine Desktop-Anwendung, die mit **Vue.js**, **Electron**, **JavaScript*
 ## Projektstruktur
 
 Die Ordnerstruktur der App ist so gestaltet, dass sie einfach erweiterbar und wartbar ist. 
-
 /my-app
-├── /src                    # Hauptverzeichnis für den Quellcode
-│   ├── /components         # Wiederverwendbare Vue-Komponenten (UI, Formular, etc.)
-│   ├── /views              # Hauptseiten/Ansichten der App (z.B. Login, Dashboard, Schuhverwaltung)
-│   ├── /services           # API- und Service-Logik (API-Calls, Auth, Wallet)
-│   ├── /router             # Vue Router Konfiguration (Routen der App)
-│   ├── /store              # Vuex Store oder globaler Zustand (optional)
-│   ├── /assets             # Statische Ressourcen (Bilder, Icons, Fonts, CSS)
-│   ├── /electron           # Electron-spezifische Dateien (Haupt- und Renderer-Prozess)
-│   └── App.vue             # Root Vue-Komponente
-│   └── main.js             # Eintrittspunkt für Vue und Electron
-│
-├── /public                 # Statische Dateien (index.html, etc.)
-│   └── index.html          # Haupt-HTML-Datei
-│
-├── /build                  # Electron Build-Konfiguration
-│   └── electron-builder.json
-│
-├── /tests                  # Unit- und E2E-Tests (falls benötigt)
-│   ├── /unit               # Unit-Tests
-│   └── /e2e                # End-to-End-Tests
-│
-├── /config                 # Umgebungsvariablen und Konfigurationen
-│   ├── vue.config.js       # Vue-spezifische Konfiguration
-│   └── .env                # Umgebungsvariablen
-│
-├── /dist                   # Produktions-Build (wird automatisch generiert)
-├── /node_modules           # Node.js Abhängigkeiten
-├── package.json            # Projektabhängigkeiten und Skripte
-├── README.md               # Projektbeschreibung
-└── .gitignore              # Dateien, die von Git ignoriert werden sollen
+    → /src                    # Hauptverzeichnis für den Quellcode
+        → /components         # Wiederverwendbare Vue-Komponenten (UI, Formular, etc.)
+        → /views              # Hauptseiten/Ansichten der App (z.B. Login, Dashboard, Schuhverwaltung)
+        → /services           # API- und Service-Logik (API-Calls, Auth, Wallet)
+        → /router             # Vue Router Konfiguration (Routen der App)
+        → /store              # Vuex Store oder globaler Zustand (optional)
+        → /assets             # Statische Ressourcen (Bilder, Icons, Fonts, CSS)
+        → /electron           # Electron-spezifische Dateien (Haupt- und Renderer-Prozess)
+        → App.vue             # Root Vue-Komponente
+        → main.js             # Eintrittspunkt für Vue und Electron
+    → /public                 # Statische Dateien (index.html, etc.)
+        → index.html          # Haupt-HTML-Datei
+    → /build                  # Electron Build-Konfiguration
+        → electron-builder.json
+    → /tests                  # Unit- und E2E-Tests (falls benötigt)
+        → /unit               # Unit-Tests
+        → /e2e                # End-to-End-Tests
+    → /config                 # Umgebungsvariablen und Konfigurationen
+        → vue.config.js       # Vue-spezifische Konfiguration
+        → .env                # Umgebungsvariablen
+    → /dist                   # Produktions-Build (wird automatisch generiert)
+    → /node_modules           # Node.js Abhängigkeiten
+    → package.json            # Projektabhängigkeiten und Skripte
+    → README.md               # Projektbeschreibung
+    → .gitignore              # Dateien, die von Git ignoriert werden sollen
+
 
 
 ### Erklärung der Ordnerstruktur
