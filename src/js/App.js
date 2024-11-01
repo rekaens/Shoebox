@@ -1,4 +1,7 @@
 import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+
+import HomeView from "./views/Home";
 
 export default function App() {
     const title = "Shoebox";
@@ -9,9 +12,10 @@ export default function App() {
     };
 
     return (
-        <>
-            <h1> {enhancedtTitle} </h1>
-            <button onClick={sendNotification}>Send Notification</button>
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomeView />} />
+            </Routes>
+        </Router>
     );
 }
