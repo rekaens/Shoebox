@@ -1,8 +1,10 @@
 import React from "react";
 
+import { withBaseLayout } from "../layout/Base";
+
 import ThemeToggle from "../components/ThemeToggle";
 
-export default function Settings() {
+function Settings() {
     return (
         <div className="p-3 bg-blue-200 h-full justify-items-center">
             <div className="mb-3 w-3/4 md:w-2/4 flex border-2 border-solid border-red-700 justify-between  h-16">
@@ -26,3 +28,5 @@ export default function Settings() {
         </div>
     );
 }
+
+export default withBaseLayout(Settings);

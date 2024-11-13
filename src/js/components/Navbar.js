@@ -1,9 +1,9 @@
 import React from "react";
-
 import { Link, useNavigate } from "react-router-dom";
 
+import UserMenu from "./UserMenu";
 
-export default function Navbar() {
+export default function Navbar({ view }) {
     const navigate = useNavigate();
 
     const sendNotification = () => {
@@ -42,7 +42,8 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-xl">Shoebox</Link>
+                <div className="btn btn-ghost text-xl">Shoebox</div>
+                {/* <ThemeToggler /> */}
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -52,13 +53,27 @@ export default function Navbar() {
                     <li>
                         <Link to="/portfolio">Portfolio</Link>
                     </li>
-                    <li>
-                        <Link to="/settings">Settings</Link>
-                    </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="hidden md:flex btn btn-outline btn-error btn-sm">Logout</a>
+                <button className="btn btn-secondary me-3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill="white"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                        />
+                    </svg>
+                    Upgrade to Pro
+                </button>
+                <UserMenu />
             </div>
         </div>
     );

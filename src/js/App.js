@@ -3,7 +3,6 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 // components
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
 
 // views
 import Welcome from "./views/Welcome";
@@ -15,12 +14,9 @@ export default function App() {
     return (
         <Router>
             <div className="flex flex-col h-screen">
-                <Navbar />
-
                 <div className="flex flex-1">
-                    <Sidebar />
 
-                    <div className="flex-1 p-4">
+                    <div className="flex-1">
                         <Routes>
                             <Route path="/portfolio" element={<PortfolioView />} />
                             <Route path="/settings" element={<SettingsView />} />
