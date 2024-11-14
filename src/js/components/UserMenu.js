@@ -20,17 +20,23 @@ export default function UserMenu() {
                 <li>
                     <a className="justify-between">
                         Profile
-                        <span className="badge">New</span>
+                        <span className="badge">TODO</span>
                     </a>
                 </li>
                 <li>
                     <Link to="/settings">Settings</Link>
                 </li>
                 <li>
-                    <a>Links</a>
+                    <a>
+                        Links
+                        <span className="badge">TODO</span>
+                    </a>
                 </li>
                 <li>
-                    <Link to="/">Logout</Link>
+                    <Link to="/">
+                        Logout
+                        <span className="badge">TODO</span>
+                    </Link>
                 </li>
             </ul>
         </div>

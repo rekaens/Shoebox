@@ -4,10 +4,13 @@ import NavBar from "../components/Navbar";
 
 export default function BaseLayout({ children, ...props }) {
     return (
-        <>
+        <div className="flex flex-col h-screen">
             <NavBar {...props} />
-            {children}
-        </>
+
+            <div className="flex-1 overflow-y-auto">
+                {children}
+            </div>
+        </div>
     );
 }
 
@@ -19,9 +22,8 @@ export const withBaseLayout = (Component, config) => (props) => {
     const viewName = getDisplayName(Component);
 
     return (
-        <>
-            <NavBar {...config} view={viewName} />
+        <BaseLayout {...config} view={viewName}>
             <Component {...props} />
-        </>
+        </BaseLayout>
     );
 };
