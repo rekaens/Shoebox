@@ -3,7 +3,8 @@ const path = require("path");
 module.exports = {
     mode: "development",
     entry: "./src/js/index.js",
-    devtool: "inline-source-map",
+    // makes debugging easier by removing unwanted react scripts and code
+    devtool: "inline-source-map", // for debugging
     target: "electron-renderer",
     module: {
         rules: [
@@ -29,13 +30,20 @@ module.exports = {
             },
             {
                 test: [/\.s[ac]ss$/i, /\.css$/i],
-                use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+                use: [
+                    // Creates `style` nodes from JS strings
+                    "style-loader",
+                    // Translates CSS into CommonJS
+                    "css-loader",
+                    // Compiles Sass to CSS
+                    "sass-loader",
+                ],
             },
         ],
     },
     plugins: [],
     resolve: {
-        extensions: [".js"],
+        extensions: [".js"], // dadurch spart man Dateiendungen -> main.js wird zu main
     },
     output: {
         filename: "app.js",
