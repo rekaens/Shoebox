@@ -8,7 +8,7 @@ export default function ShoeCard() {
     const smallCard = true;
 
     return (
-        <div className="collapse bg-base-200 w-2/4 shadow-xl mt-2 mb-2">
+        <div className="collapse bg-base-200 w-1/3 md:w-3/4 shadow-xl mt-2 mb-2">
             <input type="checkbox" />
             <div className="collapse-title text-xl font-medium p-0">
                 <div className="card card-compact card-side bg-base-100 h-24">

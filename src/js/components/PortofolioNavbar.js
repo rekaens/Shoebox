@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PortfolioNavbar() {
     return (
-        <div className="bg-base-200 flex justify-between p-2">
+        <div className="bg-base-200 flex justify-between p-2 h-16">
             <label className="btn btn-circle swap swap-rotate shadow-md">
                 <input type="checkbox" />
 
@@ -33,7 +33,7 @@ export default function PortfolioNavbar() {
             </label>
 
             <div className="flex content-center items-center">
-                <span className="inline-block text-xl">Total Value: $1,999.00</span>
+                <span className="inline-block text-xl">Shoes</span>
             </div>
 
             <button className="btn btn-success shadow-md">
