@@ -1,5 +1,5 @@
 import React from "react";
-import PortfolioNavbar from "../PortofolioNavbar";
+import PortfolioNavbar from "./PortofolioNavbar";
 import ShoeCard from "../ShoeCard";
 
 export default function PortfolioList() {

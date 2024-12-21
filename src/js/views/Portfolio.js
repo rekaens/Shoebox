@@ -4,7 +4,7 @@ import { withBaseLayout } from "../layout/Base";
 
 // components
 import ShoeCard from "../components/ShoeCard";
-import PortfolioNavbar from "../components/PortofolioNavbar";
+import PortfolioNavbar from "../components/portfolio/PortofolioNavbar";
 import PortfolioChart from "../components/portfolio/PortfolioChart";
 import PortfolioList from "../components/portfolio/PortfolioList";
 

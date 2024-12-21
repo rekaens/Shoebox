@@ -13,15 +13,15 @@ const PieChart = () => {
                 trigger: 'item',
             },
             legend: {
-                bottom: '0%',
+                bottom: '10%',
                 left: 'center',
             },
             series: [
                 {
-                    name: 'Access From',
+                    name: 'Portfolio Chart',
                     type: 'pie',
-                    radius: ['40%', '70%'],
-                    avoidLabelOverlap: false,
+                    radius: ['50%', '80%'],
+                    avoidLabelOverlap: true,
                     label: {
                         show: false,
                         position: 'center',
@@ -29,12 +29,12 @@ const PieChart = () => {
                     emphasis: {
                         label: {
                             show: true,
-                            fontSize: 20,
+                            fontSize: 40,
                             fontWeight: 'bold',
                         },
                     },
                     labelLine: {
-                        show: false,
+                        show: true,
                     },
                     data: [
                         { value: 1048, name: 'Jordan' },
@@ -48,6 +48,12 @@ const PieChart = () => {
 
         myChart.setOption(option);
 
+        const handleResize = () => {
+            myChart.resize();
+        };
+
+        window.addEventListener('resize', handleResize);
+
         return () => {
             myChart.dispose();
         };
@@ -56,7 +62,7 @@ const PieChart = () => {
     return (
         <div
             ref={chartRef}
-            style={{ width: "100%", height: "400px" }}
+            style={{ width: "100%", height: "100%" }}
         />
     );
 };
